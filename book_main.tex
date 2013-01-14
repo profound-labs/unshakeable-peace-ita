@@ -1,0 +1,126 @@
+\documentclass[11pt,twoside,final]{memoir}
+
+\usepackage{mylayout}
+
+%% Details of the book
+%% ===================
+
+\title{Una Pace Incrollabile}
+\subtitle{}
+\author{Ajahn Chah}
+\date{}
+\editionInfo{2013, \textit{First edition}, 2,000 copies}
+\printedByInfo{Printed in Malaysia.}
+\ISBN{978-1-908444-33-2}
+
+%% Hyphenation exceptions and corrections
+%% ======================================
+
+% \hyphenation{}
+
+\begin{document}
+
+\emptysheet
+
+%% Frontmatter
+%% ===========
+
+\frontmatter*
+
+%% About
+%% -----
+%% Short review or summary of the book, or comments by others.
+%% Brief bigraphy of the author, translator, editor, and their connection to the text.
+
+\cleartoverso
+\thispagestyle{empty}
+\input{./src-tex/about.tex}
+
+%% Title page
+%% ----------
+%% subtitle, editor, translator, preface by, introduction by, publisher
+
+\cleartorecto
+\thispagestyle{empty}
+\input{./src-tex/titlepage.tex}
+
+%% Copyright page
+%% --------------
+
+\cleartoverso
+\thispagestyle{empty}
+\input{./src-tex/copyright-aruno.tex}
+
+%% Acknowledgements
+%% ----------------
+
+\cleartorecto
+\thispagestyle{empty}
+\input{./src-tex/acknowledgements.tex}
+
+%% Table of Contents
+%% -----------------
+
+\cleartorecto
+\tableofcontents*
+
+\mainmatter*
+
+\book{\thetitle}
+
+\setcounter{chapter}{0}
+
+\chapterstyle{mainmatter}
+
+\chapter{Una Pace Incrollabile}
+\input{./src-tex/una-pace-incrollabile.tex}
+
+%% Backmatter
+%% ==========
+%% Appendices, Glossary, Notes, Index...
+
+\backmatter
+
+\bookmarksetup{startatroot}
+
+\chapterstyle{backmatter}
+
+"Il dono del Dhamma supera ogni altro dono"
+
+Questo libro è offerto per la distribuzione gratuita, nella speranza che
+possa essere di beneficio a chi desidera intraprendere un cammino di
+approfondimento e comprensione del proprio vivere. Per noi del monastero
+Santacittarama è un grande privilegio rendere disponibili libri come
+questo, e saremmo felici di continuare a farlo. Riceviamo volentieri i
+commenti e le osservazioni dei lettori.
+
+I costi di questa pubblicazione sono stati coperti da libere donazioni
+--- una preziosa opportunità per molti di sponsorizzare iniziative e
+dedicare la propria offerta, in linea con la tradizione buddhista.
+Future ristampe di questa o di altre opere dello stesso genere dipendono
+direttamente dai contributi offerti in tal senso. Chi fosse interessato
+a partecipare alla sponsorizzazione di ``Doni di Dhamma'' come questo,
+può contattarci al seguente indirizzo:
+
+MONASTERO SANTACITTARAMA
+
+Località Brulla, I--02030 Frasso Sabino (RI)
+
+www.santacittarama.org
+
+sangha@santacittarama.org
+
+Grazie.
+
+Per distribuzione gratuita
+
+%% Copyright details
+%% -----------------
+
+\cleartorecto
+\thispagestyle{plain}
+\input{./src-tex/copyright-details-aruno.tex}
+
+\emptysheet
+
+\end{document}
