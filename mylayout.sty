@@ -281,10 +281,11 @@ outer=17mm
 %% Renewing package macros
 %% =======================
 
-\renewcommand*{\notedivision}{\section*{\notesname}}
+\renewcommand*{\notesname}{Note Al Testo}
+\renewcommand*{\notedivision}{\chapter{\notesname}}
 \renewcommand*{\pagenotesubhead}[3]{}
 \renewcommand*{\notenumintext}[1]{\textsuperscript{\thinspace [#1]}}
-\renewcommand{\prenoteinnotes}{\par\noindent}
+\renewcommand{\prenoteinnotes}{\par\noindent\hangindent=17pt}
 \renewcommand{\postnoteinnotes}{\par\vspace*{0.5\baselineskip}}
 
 \renewcommand\footnoterule{%
@@ -382,14 +383,15 @@ outer=17mm
 
 \makechapterstyle{mainmatter}{%
   \chapterstyle{default}
-  \setlength{\beforechapskip}{30mm}
+  \setlength{\beforechapskip}{15mm}
   \setlength{\midchapskip}{2\baselineskip}
-  \setlength{\afterchapskip}{2em}
+  \setlength{\afterchapskip}{3.5em}
   \renewcommand*{\chapnumfont}{\chapNumFont\chapnamesize}
   \renewcommand*{\chapnamefont}{\chapNameFont}
   \renewcommand*{\chaptitlefont}{\chapTitleFont\chaptitlesize}
   \renewcommand*{\printchaptername}{}
-  \renewcommand*{\printchapternum}{\chapnumfont\color{chapnum}\raggedright\hspace*{17pt}\thechapter}
+  %\renewcommand*{\printchapternum}{\chapnumfont\color{chapnum}\raggedright\hspace*{17pt}\thechapter}
+  \renewcommand*{\printchapternum}{}
   \renewcommand*{\printchapternonum}{\chapnumfont\mbox{}\afterchapternum}
   \renewcommand*{\printchaptertitle}[1]{%
     \raggedright\hspace*{17pt}\parbox{0.85\linewidth}{\raggedright\chaptitlefont\color{chaptitle}\MakeUppercase{\soChapter{##1}}}}
@@ -401,7 +403,9 @@ outer=17mm
 
 \makechapterstyle{backmatter}{%
   \chapterstyle{mainmatter}%
-  \printchapternonum%
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{0pt}
+  \setlength{\afterchapskip}{1.5\baselineskip}
 }
 
 \chapterstyle{default}

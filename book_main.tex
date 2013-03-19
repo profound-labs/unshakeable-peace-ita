@@ -29,46 +29,26 @@
 
 \frontmatter*
 
-%% About
-%% -----
-%% Short review or summary of the book, or comments by others.
-%% Brief bigraphy of the author, translator, editor, and their connection to the text.
-
-\cleartoverso
-\thispagestyle{empty}
-\input{./src-tex/about.tex}
-
-%% Title page
-%% ----------
-%% subtitle, editor, translator, preface by, introduction by, publisher
-
 \cleartorecto
 \thispagestyle{empty}
 \input{./src-tex/titlepage.tex}
-
-%% Copyright page
-%% --------------
 
 \cleartoverso
 \thispagestyle{empty}
 \input{./src-tex/copyright-aruno.tex}
 
-%% Acknowledgements
-%% ----------------
-
 \cleartorecto
 \thispagestyle{empty}
 \input{./src-tex/acknowledgements.tex}
 
-%% Table of Contents
-%% -----------------
-
 \cleartorecto
 \tableofcontents*
 
-\mainmatter*
+\cleartoverso
+\thispagestyle{empty}
+\input{./src-tex/about.tex}
 
-\book{\thetitle}
+\mainmatter*
 
 \setcounter{chapter}{0}
 
@@ -81,42 +61,17 @@
 %% ==========
 %% Appendices, Glossary, Notes, Index...
 
-\backmatter
-
-\bookmarksetup{startatroot}
+%\backmatter
+%
+%\bookmarksetup{startatroot}
+%
 
 \chapterstyle{backmatter}
 
 \printpagenotes
 
-"Il dono del Dhamma supera ogni altro dono"
-
-Questo libro è offerto per la distribuzione gratuita, nella speranza che
-possa essere di beneficio a chi desidera intraprendere un cammino di
-approfondimento e comprensione del proprio vivere. Per noi del monastero
-Santacittarama è un grande privilegio rendere disponibili libri come
-questo, e saremmo felici di continuare a farlo. Riceviamo volentieri i
-commenti e le osservazioni dei lettori.
-
-I costi di questa pubblicazione sono stati coperti da libere donazioni
---- una preziosa opportunità per molti di sponsorizzare iniziative e
-dedicare la propria offerta, in linea con la tradizione buddhista.
-Future ristampe di questa o di altre opere dello stesso genere dipendono
-direttamente dai contributi offerti in tal senso. Chi fosse interessato
-a partecipare alla sponsorizzazione di ``Doni di Dhamma'' come questo,
-può contattarci al seguente indirizzo:
-
-MONASTERO SANTACITTARAMA
-
-Località Brulla, I--02030 Frasso Sabino (RI)
-
-www.santacittarama.org
-
-sangha@santacittarama.org
-
-Grazie.
-
-Per distribuzione gratuita
+\clearpage
+\input{./src-tex/gift-of-dhamma.tex}
 
 %% Copyright details
 %% -----------------

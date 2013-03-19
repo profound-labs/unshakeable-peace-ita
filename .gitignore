@@ -1,3 +1,5 @@
 *.swp
 *.aux
 *.log
+auto/
+src-tex/auto/
