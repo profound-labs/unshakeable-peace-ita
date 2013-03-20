@@ -19,6 +19,7 @@
 \graphicspath{{./src-images/}}
 \usepackage{eso-pic}
 \usepackage{ccicons}
+\usepackage{enumitem}
 
 \usepackage{tikz}
 
@@ -31,6 +32,7 @@
 \definecolor{capsline}{gray}{0.3}
 \definecolor{chapnum}{gray}{0.8}
 \definecolor{chaptitle}{gray}{0.3}
+\definecolor{tocsection}{gray}{0.3}
 % \definecolor{chapsubtitle}{gray}{0.6}
 \definecolor{footnoterule}{gray}{0.5}
 
@@ -98,6 +100,8 @@
 \newcommand{\chaptitlesize}{\@setfontsize\chaptitlesize{13}{16.5}}
 
 \newcommand{\sectiontitlesize}{\@setfontsize\sectiontitlesize{11.5}{14}}
+
+\newcommand{\tocSectionSize}{\@setfontsize\tocSectionSize{12}{15}}
 
 %% ==============================
 %% Packages that come AFTER fonts
@@ -229,10 +233,16 @@ outer=17mm
    \end{tikzpicture}}
 
 \newenvironment{packeditemize}%
-{\begin{itemize}%
-  \setlength{\itemsep}{1pt}%
-  \setlength{\parskip}{0pt}%
-  \setlength{\parsep}{0pt}%
+{\begin{itemize}[
+  itemindent=0pt,
+  leftmargin=15pt,
+  rightmargin=0pt,
+  itemsep=2pt,
+  topsep=0pt,
+  parsep=0pt,
+  partopsep=2pt,
+  partopsep=0pt,
+]%
 }{\end{itemize}}
 
 \renewenvironment{quotation}%
@@ -319,7 +329,7 @@ outer=17mm
     \createplainmark{glossary}{both}{\glossaryname}
   }
   \makeevenhead{normalpage}{}{\headFont\itshape\small\thetitle}{}
-  \makeoddhead{normalpage}{}{\headFont\itshape\small\leftmark}{}
+  \makeoddhead{normalpage}{}{\headFont\itshape\small\rightmark}{}
   \makeevenfoot{normalpage}{}{\footFont\thepage}{}
   \makeoddfoot{normalpage}{}{\footFont\thepage}{}
 
@@ -345,9 +355,12 @@ outer=17mm
 \setlength{\cftchapternumwidth}{0pt}
 \renewcommand{\chapternumberline}[1]{}
 
+\renewcommand{\cftsectionfont}{\chapTitleFont\tocSectionSize\color{tocsection}}
+\renewcommand{\cftsectionpagefont}{\tocPageNumFont\normalsize\color{tocsection}}
 \renewcommand{\cftsectiondotsep}{\cftnodots}
 \renewcommand{\cftsectionpresnum}[1]{}
 \setlength{\cftsectionnumwidth}{0pt}
+\setlength{\cftbeforesectionskip}{3pt}
 \renewcommand{\numberline}[1]{}
 
 \renewcommand{\cftsubsectiondotsep}{\cftnodots}

@@ -1,6 +1,9 @@
 
 \thispagestyle{empty}
 
+\newsavebox{\giftofdhammabox}
+
+\begin{lrbox}{\giftofdhammabox}\begin{minipage}{\linewidth}
 {\setlength{\parskip}{\baselineskip}
 \centering
 
@@ -29,3 +32,7 @@ sangha@santacittarama.org
 \emph{Grazie}.
 
 }
+\end{minipage}\end{lrbox}%
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.center) {\usebox{\giftofdhammabox}};
+\end{tikzpicture}
