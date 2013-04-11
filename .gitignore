@@ -4,6 +4,7 @@
 *.toc
 *.ent
 book_main.pdf
+cover.pdf
 auto/
 src-tex/auto/
 pdf-keep/proofing/

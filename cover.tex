@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper,oneside,showtrims]{memoir}
+
+\makeatletter
+
+\usepackage{calc}
+\usepackage[cmyk]{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./src-images/}}
+\usepackage{eso-pic}
+\usepackage{soul}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={TeX}}
+
+\setmainfont[Renderer = Basic]{Shaker 2 Light}
+
+\newfontfamily\titleFont{Arno Pro}
+
+\sodef\soChapter{}{.05em}{.2em plus.1em}{.1em plus.1em minus.1em}
+
+\newlength\onePageWidth
+\newlength\onePageHeight
+\newlength\spineWidth
+
+% pagesize: 5.25in x 8in
+% spinewidth: 5.452mm = (84/2)*0.106+1
+\setlength{\onePageWidth}{5.25in}
+\setlength{\onePageHeight}{8in}
+\setlength{\spineWidth}{5.452mm}
+
+\newlength\geoPaperWidth
+\setlength\geoPaperWidth{2\onePageWidth+\spineWidth}
+\newlength\frontCoverX
+\setlength\frontCoverX{\onePageWidth+\spineWidth}
+
+\setstocksize{\onePageHeight + 40mm}{\geoPaperWidth + 40mm}
+\setlength{\paperheight}{\onePageHeight}
+\setlength{\paperwidth}{\geoPaperWidth}
+\trimXmarks
+\trimLmarks
+\quarkmarks
+\settrims{0.5\stockheight - 0.5\paperheight}{0.5\stockwidth - 0.5\paperwidth}
+\settrimmedsize{\onePageHeight}{\geoPaperWidth}{*}
+
+%\usepackage[
+%  paperwidth=\geoPaperWidth,
+%  paperheight=\onePageHeight,
+%  nohead,
+%  nofoot,
+%  margin=0pt]{geometry}
+
+\pagestyle{empty}
+
+\color{white}
+
+\makeatother
+
+\begin{document}
+\mbox{}
+%\pagecolor[RGB]{137, 101, 82}
+
+\AddToShipoutPictureBG*{\put(\LenToUnit{-3mm},\LenToUnit{-3mm})%
+{\includegraphics[
+  keepaspectratio,
+  height={\paperheight+6mm},
+  clip,
+  trim=0 0 35mm 5mm,
+]{cover-image.jpg}}}
+
+\AddToShipoutPictureFG*{\put(\LenToUnit{0mm},\LenToUnit{15mm})%
+{%
+\begin{minipage}[b][20mm][b]{\onePageWidth}
+\centering\fontsize{15}{15}\selectfont
+
+Per distribuzione gratuita
+
+\end{minipage}
+}}
+
+\AddToShipoutPictureFG*{\put(\LenToUnit{\frontCoverX},\LenToUnit{15mm})%
+{%
+\begin{minipage}[b][40mm][b]{\onePageWidth-8mm}
+\raggedleft
+
+\fontsize{40}{38}\fontspec{Arno Pro}
+\soChapter{UNA PACE}\\
+\soChapter{INCROLLABILE}
+
+\vspace*{10mm}
+
+\fontsize{26}{26}\normalfont
+Venerabile Ajahn Chah
+
+\end{minipage}
+}}
+
+\end{document}
+
