@@ -18,6 +18,9 @@ again:
 view:
 	evince $(FILE).pdf &
 
+print-specs:
+	org-ruby print-specs.org --translate textile | pandoc --from=textile --to=odt -o print-specs.odt;
+
 cover-front:
 	$(LATEX) $(LATEX_OPTS) cover_front.tex
 

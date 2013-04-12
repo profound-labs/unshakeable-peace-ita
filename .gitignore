@@ -5,6 +5,7 @@
 *.ent
 book_main.pdf
 cover.pdf
+print-specs.odt
 auto/
 src-tex/auto/
 pdf-keep/proofing/
