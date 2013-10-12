@@ -7,5 +7,6 @@ book_main.pdf
 cover.pdf
 print-specs.odt
 auto/
+docs/
 src-tex/auto/
-pdf-keep/proofing/
+publish/proofing/
