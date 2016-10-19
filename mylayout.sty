@@ -55,8 +55,11 @@
 
 \setmainfont[
   SmallCapsFont = Arno Pro,
-  SmallCapsFeatures= { Ligatures = TeX, Letters = SmallCaps }
-]{Gentium}
+  SmallCapsFeatures= { Ligatures = TeX, Letters = SmallCaps },
+  ItalicFont = Gentium Plus Italic,
+  BoldFont = Gentium Book Basic Bold,
+  BoldItalicFont = Gentium Book Basic Bold Italic,
+]{Gentium Plus}
 
 \newfontfamily\chapTitleFont{Arno Pro}
 \newfontfamily\chapNameFont{Arno Pro}
@@ -65,12 +68,20 @@
 \newfontfamily\sectionFont{Arno Pro}
 
 \newfontfamily\headFont{Arno Pro}
-\newfontfamily\footFont{Gentium}
+
+\newfontfamily\gentiumFont[
+  ItalicFont = Gentium Plus Italic,
+  BoldFont = Gentium Book Basic Bold,
+  BoldItalicFont = Gentium Book Basic Bold Italic,
+]{Gentium Plus}
+
+
+\newcommand\footFont\gentiumFont
 
 % lettrineFirstLetter
 % lettrineWords
 
-\newfontfamily\tocPageNumFont{Gentium}
+\newcommand\tocPageNumFont\gentiumFont
 
 % \addfontfeature{Kerning = Uppercase}
 
