@@ -1,7 +1,7 @@
-Unshakeable Peace (ITA)
+Una Pace Incrollabile
 =======================
 
-by Ajahn Chah
+Italian translation of *Unshakeable Peace* by Ajahn Chah
 
 Find the final PDF files in `publish/final/` folder.
 
